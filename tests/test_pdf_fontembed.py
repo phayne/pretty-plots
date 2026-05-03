@@ -12,11 +12,11 @@ import io
 import matplotlib.pyplot as plt
 import pytest
 
-import idl_style
+from pretty_plots import idl
 
 
 def _make_fig_with_text():
-    fig, ax = idl_style.subplots()
+    fig, ax = idl.subplots()
     ax.plot([0, 1, 2], [0, 1, 4], label="$y = x^2$")
     ax.set_xlabel("Time (s)")
     ax.set_ylabel(r"Flux ($\sigma$)")
@@ -69,7 +69,7 @@ def _font_subtypes_in_pdf(data: bytes) -> list[bytes]:
 
 
 def test_pdf_uses_truetype_not_type3():
-    idl_style.use()
+    idl.use()
     data = _save_pdf_bytes()
     subtypes = _font_subtypes_in_pdf(data)
 

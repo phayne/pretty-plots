@@ -3,14 +3,17 @@ requires = ["hatchling>=1.21"]
 build-backend = "hatchling.build"
 
 [project]
-name = "idl-style"
-version = "0.1.0"
-description = "IDL-style matplotlib: publication-quality plots with Helvetica-family sans-serif, inward ticks, rounded line caps, and embedded TrueType PDF output."
+name = "pretty-plots"
+version = "0.2.0"
+description = "Publication-quality matplotlib styles, organized as families: planetary (default), idl (with per-journal variants and Hershey vector fonts), and more to come."
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
-authors = [{ name = "idl_style contributors" }]
-keywords = ["matplotlib", "idl", "publication", "plotting", "style", "hershey", "colormap"]
+authors = [
+    { name = "Paul O. Hayne", email = "paul.hayne@colorado.edu" },
+    { name = "pretty_plots contributors" },
+]
+keywords = ["matplotlib", "publication", "plotting", "style", "planetary", "idl", "hershey", "colormap"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Framework :: Matplotlib",
@@ -33,25 +36,25 @@ test = ["pytest>=7", "pytest-mpl>=0.16", "pypdf>=4"]
 dev = ["pytest>=7", "pytest-mpl>=0.16", "pypdf>=4", "ruff>=0.5", "mypy>=1.10"]
 
 [project.urls]
-Homepage = "https://github.com/example/idl-style"
-Issues = "https://github.com/example/idl-style/issues"
+Homepage = "https://github.com/phayne/pretty-plots"
+Issues = "https://github.com/phayne/pretty-plots/issues"
 
-# Note: matplotlib doesn't auto-discover .mplstyle files via entry points;
-# idl_style.__init__ instead appends src/idl_style/styles/ to
+# Note: matplotlib doesn't auto-discover .mplstyle files via entry points.
+# Each family's __init__.py (pretty_plots/idl/__init__.py and
+# pretty_plots/planetary/__init__.py) appends its own styles/ directory to
 # matplotlib.style.core.USER_LIBRARY_PATHS at import time, which makes plain
-# names like plt.style.use("idl") and plt.style.use(["idl", "idl-aas"]) work.
+# names like plt.style.use("idl") and plt.style.use(["planetary", "planetary-latex"]) work.
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/idl_style"]
-
-[tool.hatch.build.targets.wheel.force-include]
-"src/idl_style/styles" = "idl_style/styles"
-"src/idl_style/fonts" = "idl_style/fonts"
-"src/idl_style/hershey/data" = "idl_style/hershey/data"
+packages = ["src/pretty_plots"]
+# Hatch's package discovery picks up every file under packages/, including
+# non-Python data (mplstyle, OTF, JHF, txt). No force-include needed —
+# adding one would double-bundle the assets and trigger zipfile duplicate-
+# name warnings.
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "src/idl_style",
+    "src/pretty_plots",
     "tests",
     "examples",
     "tools",

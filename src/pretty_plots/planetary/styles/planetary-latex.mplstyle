@@ -1,0 +1,5 @@
+# Planetary + LaTeX rendering. Apply on top of `planetary`:
+#     plt.style.use(["planetary", "planetary-latex"])
+# Requires a working LaTeX installation on PATH.
+
+text.usetex: True

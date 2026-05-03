@@ -1,7 +1,7 @@
 """Verify that font registration is idempotent and tolerates missing files.
 
 The actual presence of TeX Gyre Heros depends on whether the OTFs have been
-bundled into ``src/idl_style/fonts/``. When they're missing we still expect
+bundled into ``src/pretty_plots/idl/fonts/``. When they're missing we still expect
 the registration call to succeed without raising — the fallback chain in
 ``font.sans-serif`` handles rendering.
 """
@@ -10,12 +10,12 @@ from __future__ import annotations
 
 import matplotlib.font_manager as fm
 
-import idl_style
+from pretty_plots import idl
 
 
 def test_register_is_idempotent():
-    first = idl_style.register_bundled_fonts()
-    second = idl_style.register_bundled_fonts()
+    first = idl.register_bundled_fonts()
+    second = idl.register_bundled_fonts()
     # First call may register zero (already done at import) or N; second
     # call must always be a no-op.
     assert second == []
@@ -26,11 +26,11 @@ def test_force_registration_returns_paths_when_otfs_present():
     """If OTFs are bundled, force=True must report them."""
     from pathlib import Path
 
-    fonts_dir = Path(idl_style.__file__).parent / "fonts"
+    fonts_dir = Path(idl.__file__).parent / "fonts"
     otfs = list(fonts_dir.glob("*.otf"))
     if not otfs:
         return  # bundle absent; skip silently
-    paths = idl_style.register_bundled_fonts(force=True)
+    paths = idl.register_bundled_fonts(force=True)
     assert len(paths) >= 1
 
 

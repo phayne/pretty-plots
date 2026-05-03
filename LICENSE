@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 idl_style contributors
+Copyright (c) 2017-2026 Paul O. Hayne and pretty_plots contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,11 +24,11 @@ SOFTWARE.
 
 Bundled assets:
 
-* TeX Gyre Heros OTF files in src/idl_style/fonts/ are distributed under the
+* TeX Gyre Heros OTF files in src/pretty_plots/idl/fonts/ are distributed under the
   GUST Font License (a free, permissive license; see fonts/PROVENANCE.txt).
   Original source: https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros
 
-* Hershey font JHF files in src/idl_style/hershey/data/ are based on the
+* Hershey font JHF files in src/pretty_plots/idl/hershey/data/ are based on the
   public-domain Hershey vector fonts originally published by Allen V. Hershey
   in 1967. The JHF format encoding is by James Hurt and is also in the public
   domain.

@@ -6,9 +6,9 @@ import matplotlib as mpl
 import numpy as np
 import pytest
 
-import idl_style
-from idl_style.colortables._data import BUILDERS
-from idl_style.colortables._names import ALL_KEYS
+from pretty_plots import idl
+from pretty_plots.idl.colortables._data import BUILDERS
+from pretty_plots.idl.colortables._names import ALL_KEYS
 
 
 def test_all_41_registered():
@@ -29,8 +29,8 @@ def test_lut_shape_and_dtype(key):
 
 
 def test_register_idempotent():
-    first_extra = idl_style.register_idl_colormaps()
-    second_extra = idl_style.register_idl_colormaps()
+    first_extra = idl.register_idl_colormaps()
+    second_extra = idl.register_idl_colormaps()
     assert second_extra == []
     assert isinstance(first_extra, list)
 

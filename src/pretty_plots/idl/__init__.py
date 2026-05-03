@@ -1,21 +1,21 @@
-"""idl_style — IDL-style matplotlib for publication-quality plots.
+"""IDL-style family for pretty_plots — publication-quality matplotlib in the IDL aesthetic.
 
 Quickstart::
 
-    import idl_style
-    idl_style.use()                              # apply globally
-    with idl_style.context():                    # apply temporarily
+    from pretty_plots import idl
+    idl.use()                              # apply globally
+    with idl.context():                    # apply temporarily
         ...
-    fig, ax = idl_style.subplots(figsize=(8, 5)) # convenience wrapper
+    fig, ax = idl.subplots(figsize=(8, 5)) # convenience wrapper
 
 Variant stylesheets are also available::
 
-    idl_style.use(variant="aas")        # AAS journals (ApJ, AJ)
-    idl_style.use(variant="aa")         # A&A
-    idl_style.use(variant="nature")     # Nature
-    idl_style.use(variant="icarus")     # Icarus / Elsevier
-    idl_style.use(variant="hershey")    # Hershey vector-font aesthetic
-    idl_style.use(variant="latex")      # text.usetex=True with helvet+sansmath
+    idl.use(variant="aas")        # AAS journals (ApJ, AJ)
+    idl.use(variant="aa")         # A&A
+    idl.use(variant="nature")     # Nature
+    idl.use(variant="icarus")     # Icarus / Elsevier
+    idl.use(variant="hershey")    # Hershey vector-font aesthetic
+    idl.use(variant="latex")      # text.usetex=True with helvet+sansmath
 
 Or as plain matplotlib stylesheets::
 
@@ -43,8 +43,6 @@ from .helpers import (
     subplots,
 )
 from .hershey import hershey_text
-
-__version__ = "0.1.0"
 
 __all__ = [
     "RCPARAMS",
@@ -100,8 +98,8 @@ def use(variant: str | None = None) -> None:
     """Apply IDL style globally to matplotlib's rcParams.
 
     Pass ``variant`` to layer journal- or mode-specific overrides on top of
-    the base style. See :data:`idl_style._variants.VARIANT_OVERRIDES` for
-    the full list.
+    the base style. See :data:`pretty_plots.idl._variants.VARIANT_OVERRIDES`
+    for the full list.
     """
     plt.rcParams.update(RCPARAMS)
     plt.rcParams.update(_resolve_overrides(variant))

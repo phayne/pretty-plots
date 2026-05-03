@@ -1,5 +1,6 @@
-# IDL-style matplotlib stylesheet — generated from idl_style/_params.py.
-# Do not edit by hand: edit RCPARAMS and re-run tools/regenerate_mplstyle.py.
+# IDL-style matplotlib stylesheet — generated from pretty_plots/idl/_params.py.
+# Do not edit by hand: edit RCPARAMS and re-run
+#     tools/regenerate_mplstyle.py --family idl
 
 font.family: sans-serif
 font.sans-serif: TeX Gyre Heros, Nimbus Sans, Helvetica, Liberation Sans, Arial, DejaVu Sans

@@ -5,9 +5,9 @@ from __future__ import annotations
 import matplotlib.pyplot as plt
 import numpy as np
 
-import idl_style
-from idl_style.hershey._builtin import builtin_glyphs
-from idl_style.hershey._parser import parse_jhf, parse_record
+from pretty_plots import idl
+from pretty_plots.idl.hershey._builtin import builtin_glyphs
+from pretty_plots.idl.hershey._parser import parse_jhf, parse_record
 
 
 def test_parse_record_simple():
@@ -45,8 +45,8 @@ def test_builtin_covers_printable_ascii():
 
 
 def test_hershey_text_returns_collection():
-    fig, ax = idl_style.subplots()
-    lc = idl_style.hershey_text(ax, 0.5, 0.5, "Hello", typeface="default", size=14)
+    fig, ax = idl.subplots()
+    lc = idl.hershey_text(ax, 0.5, 0.5, "Hello", typeface="default", size=14)
     # Cap height ~14 pts at size=14 → at least one stroke segment.
     segments = lc.get_segments()
     assert len(segments) > 0
@@ -54,23 +54,23 @@ def test_hershey_text_returns_collection():
 
 
 def test_hershey_text_alignment_options():
-    fig, ax = idl_style.subplots()
+    fig, ax = idl.subplots()
     for ha in ("left", "center", "right"):
         for va in ("baseline", "bottom", "top", "center"):
-            idl_style.hershey_text(ax, 0, 0, "x", ha=ha, va=va)
+            idl.hershey_text(ax, 0, 0, "x", ha=ha, va=va)
     plt.close(fig)
 
 
 def test_available_typefaces_includes_builtin():
-    from idl_style.hershey import available_typefaces
+    from pretty_plots.idl.hershey import available_typefaces
 
     assert "builtin" in available_typefaces()
 
 
 def test_hershey_text_unknown_typeface_raises():
-    fig, ax = idl_style.subplots()
+    fig, ax = idl.subplots()
     import pytest
 
     with pytest.raises(KeyError, match="unknown typeface"):
-        idl_style.hershey_text(ax, 0, 0, "x", typeface="not-a-typeface")
+        idl.hershey_text(ax, 0, 0, "x", typeface="not-a-typeface")
     plt.close(fig)
