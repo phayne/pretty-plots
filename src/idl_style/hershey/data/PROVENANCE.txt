@@ -1,0 +1,62 @@
+Hershey vector fonts — bundled font provenance
+==============================================
+
+Source
+------
+Origin:  Dr. Allen V. Hershey, U.S. Naval Weapons Laboratory.
+         Wolcott & Hilsenrath, "A Contribution to Computer Typesetting
+         Techniques: Tables of Coordinates for Hershey's Repertory of
+         Occidental Type Fonts and Graphic Symbols", NBS Special
+         Publication 424 (U.S. National Bureau of Standards, 1976).
+JHF format: James Hurt's conversion of the original NTIS coordinate
+         tables into the line-oriented "JHF" text format, distributed
+         on USENET in 1989.
+Mirror:  https://github.com/kamalmostafa/hershey-fonts
+         (the upstream used by the Debian/Ubuntu `libhersheyfont`
+         package; listed in the FSF Free Software Directory)
+Fetched: 2026-05-03
+
+License
+-------
+The Hershey fonts are a U.S. Government work and are in the public
+domain. The James Hurt JHF redistribution carries the standard notice:
+
+    "This distribution of the Hershey Fonts may be used by anyone for
+     any purpose, commercial or otherwise, providing that:
+       1. The following acknowledgement must be distributed with the
+          font data:
+          - The Hershey Fonts were originally created by Dr. A. V.
+            Hershey while working at the U.S. National Bureau of
+            Standards.
+          - The format of the Font data in this distribution was
+            originally created by James Hurt, Cognition, Inc.
+       2. The font data in this distribution may be converted into any
+          other format EXCEPT the format distributed by the U.S. NTIS
+          (which carries its own restrictions), provided that the
+          original acknowledgement is included with the converted form."
+
+The package's overall MIT license does not apply to these JHF files;
+their license travels with the files (as recorded above).
+
+Files and SHA-256 checksums
+---------------------------
+rowmans.jhf  3470 bytes  8718fb129c0f6bce89c84fe41bc467e39534d215a6f7c3220cc5789a8a7d8618  Roman Simplex
+rowmand.jhf  6128 bytes  c56497b162a3831f0da2e189ada4a7335ce81b1c3c1cf380b2ced04287313d2e  Roman Duplex
+rowmant.jhf  9116 bytes  703d6a641334bce32ae8347900b6ec743d4672f898266796853f26f53918b52a  Roman Triplex
+timesi.jhf   5904 bytes  66cd7ca5c402d5609de083b166f704d89025619f2dabe42f3d13be95b261414b  Times-Italic
+scripts.jhf  5528 bytes  6b391b2ea3a0771cf18caff0ed111db3d05681fa586d423a740cc0b2b155a873  Script Simplex
+scriptc.jhf  6586 bytes  747f9384b0adbec3f6826cc374727adb262c6a96e2a758a2472d11291b7104c7  Script Complex
+greekc.jhf   5628 bytes  e1eae76922db931d47475b868ff1cf19bf083601925272a541f914cc71004fb4  Greek Complex
+
+Verification
+------------
+    cd src/idl_style/hershey/data
+    shasum -a 256 -c <<'EOF'
+    8718fb129c0f6bce89c84fe41bc467e39534d215a6f7c3220cc5789a8a7d8618  rowmans.jhf
+    c56497b162a3831f0da2e189ada4a7335ce81b1c3c1cf380b2ced04287313d2e  rowmand.jhf
+    703d6a641334bce32ae8347900b6ec743d4672f898266796853f26f53918b52a  rowmant.jhf
+    66cd7ca5c402d5609de083b166f704d89025619f2dabe42f3d13be95b261414b  timesi.jhf
+    6b391b2ea3a0771cf18caff0ed111db3d05681fa586d423a740cc0b2b155a873  scripts.jhf
+    747f9384b0adbec3f6826cc374727adb262c6a96e2a758a2472d11291b7104c7  scriptc.jhf
+    e1eae76922db931d47475b868ff1cf19bf083601925272a541f914cc71004fb4  greekc.jhf
+    EOF
