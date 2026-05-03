@@ -1,4 +1,4 @@
-"""Hershey vector-font support for idl_style.
+"""Hershey vector-font support for pretty_plots.idl.
 
 Public entry points:
 
@@ -8,7 +8,7 @@ Public entry points:
 
 By default the package ships only a small built-in stroke font (printable
 ASCII) so ``hershey_text`` works without external data. Drop authentic
-Hershey ``.jhf`` files into ``idl_style/hershey/data/`` (or call
+Hershey ``.jhf`` files into ``pretty_plots/idl/hershey/data/`` (or call
 :func:`load_jhf`) to use the full Hershey distribution.
 
 Standard Hershey typeface filenames:

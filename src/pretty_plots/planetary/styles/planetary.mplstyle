@@ -1,0 +1,12 @@
+# Planetary matplotlib stylesheet — generated from pretty_plots/planetary/_params.py.
+# Do not edit by hand: edit RCPARAMS and re-run
+#     tools/regenerate_mplstyle.py --family planetary
+
+font.family: serif
+font.size: 16
+lines.linewidth: 2
+lines.markersize: 8
+axes.titlesize: 22
+axes.labelsize: 20
+xtick.labelsize: 18
+ytick.labelsize: 18

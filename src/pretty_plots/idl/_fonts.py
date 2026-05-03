@@ -1,4 +1,4 @@
-"""Bundled font registration for idl_style.
+"""Bundled font registration for the pretty_plots.idl family.
 
 The package ships TeX Gyre Heros (an OFL-licensed Helvetica clone) so that
 the style renders identically across systems regardless of what the user has
@@ -55,12 +55,12 @@ def register_bundled_fonts(force: bool = False) -> list[str]:
             fm.fontManager.addfont(str(path))
             registered.append(str(path))
         except Exception as exc:  # pragma: no cover - matplotlib font errors are rare
-            warnings.warn(f"idl_style: failed to register {path.name}: {exc}", stacklevel=2)
+            warnings.warn(f"pretty_plots.idl: failed to register {path.name}: {exc}", stacklevel=2)
 
     _REGISTERED = True
     if not registered and not _primary_already_present():
         warnings.warn(
-            f"idl_style: '{_PRIMARY_FAMILY}' not bundled and not installed system-wide. "
+            f"pretty_plots.idl: '{_PRIMARY_FAMILY}' not bundled and not installed system-wide. "
             "The style will fall back through font.sans-serif (Nimbus Sans, Helvetica, "
             "Liberation Sans, Arial, DejaVu Sans). To bundle, place TeX Gyre Heros OTFs "
             f"in {_FONTS_DIR} and reinstall.",

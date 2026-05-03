@@ -1,8 +1,8 @@
-"""rcParam overrides for idl_style variants.
+"""rcParam overrides for pretty_plots.idl variants.
 
 Each variant is a delta on top of ``RCPARAMS`` from ``_params.py``. The same
 deltas are encoded in the matching ``styles/idl-<variant>.mplstyle`` file so
-that ``plt.style.use('idl-aas')`` and ``idl_style.use(variant='aas')`` produce
+that ``plt.style.use('idl-aas')`` and ``idl.use(variant='aas')`` produce
 identical rcParams.
 """
 

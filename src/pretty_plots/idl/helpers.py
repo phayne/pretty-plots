@@ -160,7 +160,7 @@ def save_publication(
 def subplots(*args: Any, **kwargs: Any):
     """:func:`matplotlib.pyplot.subplots` with IDL style applied first.
 
-    Calls :func:`idl_style.use` once if no IDL style is currently active
+    Calls :func:`pretty_plots.idl.use` once if no IDL style is currently active
     (detected by spot-checking ``xtick.direction``). Subsequent calls don't
     re-apply.
     """

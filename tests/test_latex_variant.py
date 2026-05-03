@@ -12,7 +12,7 @@ import shutil
 import matplotlib.pyplot as plt
 import pytest
 
-import idl_style
+from pretty_plots import idl
 
 requires_latex = pytest.mark.skipif(
     shutil.which("latex") is None,
@@ -23,7 +23,7 @@ requires_latex = pytest.mark.skipif(
 def test_latex_variant_overrides_apply_without_rendering():
     """The override dict applies even on systems without LaTeX."""
     plt.rcdefaults()
-    idl_style.use(variant="latex")
+    idl.use(variant="latex")
     assert plt.rcParams["text.usetex"] is True
     assert "helvet" in plt.rcParams["text.latex.preamble"]
     assert plt.rcParams["pdf.fonttype"] == 42
@@ -32,7 +32,7 @@ def test_latex_variant_overrides_apply_without_rendering():
 @requires_latex
 def test_latex_variant_renders_math():
     plt.rcdefaults()
-    idl_style.use(variant="latex")
+    idl.use(variant="latex")
     fig, ax = plt.subplots()
     ax.plot([0, 1], [0, 1])
     ax.set_xlabel(r"$\alpha$")
