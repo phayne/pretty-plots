@@ -1,0 +1,9 @@
+# Icarus / Elsevier — single-column 90 mm; double-column 190 mm.
+#     plt.style.use(["idl", "idl-icarus"])
+figure.figsize: 3.5433, 2.6378
+font.size: 10
+axes.labelsize: 10
+axes.titlesize: 10
+xtick.labelsize: 8
+ytick.labelsize: 8
+legend.fontsize: 9

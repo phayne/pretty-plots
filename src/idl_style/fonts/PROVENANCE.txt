@@ -1,0 +1,34 @@
+TeX Gyre Heros — bundled font provenance
+========================================
+
+Source
+------
+Origin:  GUST e-foundry, TeX Gyre Heros project.
+         https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros
+Mirror:  CTAN, https://mirrors.ctan.org/fonts/tex-gyre/opentype/
+Fetched: 2026-05-01
+
+License
+-------
+GUST Font License (GFL) — a free, permissive license compatible with the
+LaTeX Project Public License. Modification and redistribution are permitted
+provided modified versions are renamed. See the GUST website above for the
+full license text. The package's overall MIT license does not apply to
+these OTF files; their license travels with the files.
+
+Files and SHA-256 checksums
+---------------------------
+texgyreheros-regular.otf     133600 bytes  6ae1a09d5a940367b7aaaa91ee8bd8a2c333bfe193e7096e23f931357d62081f
+texgyreheros-bold.otf        135204 bytes  b170162835f4efc288886dd4231406dc47e19b614cf4416836635599d44a7d60
+texgyreheros-italic.otf      139208 bytes  6473df7fa107b3fb4be38973710afe22b0640c2ac076d5337cf126bed9aa108c
+texgyreheros-bolditalic.otf  135264 bytes  166fc6d068d9c9974281555cb3d730365537a9b676ab269bb5163f5a75496505
+
+Verification
+------------
+    cd src/idl_style/fonts
+    shasum -a 256 -c <<'EOF'
+    6ae1a09d5a940367b7aaaa91ee8bd8a2c333bfe193e7096e23f931357d62081f  texgyreheros-regular.otf
+    b170162835f4efc288886dd4231406dc47e19b614cf4416836635599d44a7d60  texgyreheros-bold.otf
+    6473df7fa107b3fb4be38973710afe22b0640c2ac076d5337cf126bed9aa108c  texgyreheros-italic.otf
+    166fc6d068d9c9974281555cb3d730365537a9b676ab269bb5163f5a75496505  texgyreheros-bolditalic.otf
+    EOF

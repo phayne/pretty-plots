@@ -1,0 +1,11 @@
+# Nature — single-column 89 mm; double-column 183 mm. 8 pt minimum body text.
+#     plt.style.use(["idl", "idl-nature"])
+figure.figsize: 3.5039, 2.6378
+font.size: 8
+axes.labelsize: 8
+axes.titlesize: 8
+xtick.labelsize: 7
+ytick.labelsize: 7
+axes.linewidth: 1.0
+lines.linewidth: 1.2
+legend.fontsize: 7

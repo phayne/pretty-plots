@@ -1,0 +1,9 @@
+# Hershey-aesthetic accompaniment — apply on top of `idl` when you intend
+# to use idl_style.hershey_text() for stroke-rendered labels:
+#     plt.style.use(["idl", "idl-hershey"])
+axes.linewidth: 1.0
+lines.linewidth: 1.4
+xtick.major.width: 1.0
+ytick.major.width: 1.0
+xtick.minor.width: 0.7
+ytick.minor.width: 0.7

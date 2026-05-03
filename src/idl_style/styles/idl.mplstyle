@@ -1,0 +1,51 @@
+# IDL-style matplotlib stylesheet — generated from idl_style/_params.py.
+# Do not edit by hand: edit RCPARAMS and re-run tools/regenerate_mplstyle.py.
+
+font.family: sans-serif
+font.sans-serif: TeX Gyre Heros, Nimbus Sans, Helvetica, Liberation Sans, Arial, DejaVu Sans
+font.size: 11
+mathtext.fontset: custom
+mathtext.rm: TeX Gyre Heros
+mathtext.it: TeX Gyre Heros:italic
+mathtext.bf: TeX Gyre Heros:bold
+mathtext.default: regular
+axes.linewidth: 1.4
+axes.labelsize: 12
+axes.titlesize: 12
+axes.spines.top: True
+axes.spines.right: True
+axes.unicode_minus: False
+xtick.direction: in
+ytick.direction: in
+xtick.top: True
+ytick.right: True
+xtick.minor.visible: True
+ytick.minor.visible: True
+xtick.major.size: 6
+ytick.major.size: 6
+xtick.minor.size: 3
+ytick.minor.size: 3
+xtick.major.width: 1.2
+ytick.major.width: 1.2
+xtick.minor.width: 0.9
+ytick.minor.width: 0.9
+xtick.labelsize: 10
+ytick.labelsize: 10
+lines.linewidth: 1.8
+lines.solid_capstyle: round
+lines.solid_joinstyle: round
+lines.dash_capstyle: round
+lines.dash_joinstyle: round
+lines.markersize: 5
+patch.linewidth: 1.0
+legend.frameon: True
+legend.framealpha: 1.0
+legend.edgecolor: black
+legend.fancybox: False
+hatch.linewidth: 0.6
+hatch.color: black
+figure.dpi: 110
+savefig.dpi: 300
+savefig.bbox: tight
+pdf.fonttype: 42
+ps.fonttype: 42

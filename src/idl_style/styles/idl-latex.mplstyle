@@ -1,0 +1,8 @@
+# LaTeX-rendered variant — uses TeX's helvet + sansmath rather than the
+# bundled TeX Gyre Heros. Requires a working LaTeX installation on PATH.
+#     plt.style.use(["idl", "idl-latex"])
+text.usetex: True
+text.latex.preamble: \usepackage[scaled]{helvet}\renewcommand{\familydefault}{\sfdefault}\usepackage{sansmath}\sansmath
+font.family: sans-serif
+pdf.fonttype: 42
+ps.fonttype: 42
